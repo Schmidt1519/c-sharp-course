@@ -38,9 +38,17 @@ namespace Arrays
             Fruits.Add("Blueberries");
             Fruits.Add("Apples");
 
+
+
+            List<string> Vegetables = new List<string>();
+            Vegetables.Add("Carrot");
+            Vegetables.Add("Peas");
+
+            Fruits.AddRange(Vegetables);
+
             Console.WriteLine(Fruits.Count);
             Console.ReadLine();
-
+            Console.ReadLine();
         }
     }
 }
