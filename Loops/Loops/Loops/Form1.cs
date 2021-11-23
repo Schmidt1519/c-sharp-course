@@ -19,13 +19,20 @@ namespace Loops
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int count = 1;
+            //int count = 1;
 
-            while(count <= 4)
+            //while(count <= 4)
+            //{
+            //    MessageBox.Show("The value of i is: " + count);
+            //    count = count + 1;
+            //}
+
+            int count = 1;
+            do
             {
-                MessageBox.Show("The value of i is: " + count);
-                count = count + 1;
-            }
+                MessageBox.Show("Loop executed successfully");
+                count++;
+            } while (count <= 4);
         }
     }
 }
