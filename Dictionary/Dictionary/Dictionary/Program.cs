@@ -14,12 +14,18 @@ namespace Dictionary
             phonebook.Add("John", 9133161234);
             phonebook["Bob"] = 9133164321;
 
-            phonebook.Remove("John");
+            phonebook.Remove("Bob");
+
+            if(phonebook.ContainsKey("John"))
+            {
+                Console.WriteLine("John's number is " + phonebook["John"]);
+                Console.ReadLine();
+            }
 
 
             // Console.WriteLine(phonebook["John"]);
-            Console.WriteLine(phonebook.Count);
-            Console.ReadLine();
+            // Console.WriteLine(phonebook.Count);
+            // Console.ReadLine();
 
         }
     }
