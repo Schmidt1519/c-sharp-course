@@ -19,20 +19,32 @@ namespace Loops
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //int count = 1;
+            // WHILE
 
+            //int count = 1;
             //while(count <= 4)
             //{
             //    MessageBox.Show("The value of i is: " + count);
             //    count = count + 1;
             //}
 
-            int count = 1;
-            do
+            
+            //DO WHILE
+            
+            //int count = 1;
+            //do
+            //{
+            //    MessageBox.Show("Loop executed successfully");
+             //} while (count <= 4);
+
+
+            // FOREACH
+
+            string[] days = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+            foreach(string day in days)
             {
-                MessageBox.Show("Loop executed successfully");
-                count++;
-            } while (count <= 4);
+                MessageBox.Show("the Day is : " + day);
+            }
         }
     }
 }
