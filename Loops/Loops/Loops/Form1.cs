@@ -12,6 +12,8 @@ namespace Loops
 {
     public partial class Form1 : Form
     {
+        private object firstNameBox;
+
         public Form1()
         {
             InitializeComponent();
@@ -28,23 +30,24 @@ namespace Loops
             //    count = count + 1;
             //}
 
-            
+
             //DO WHILE
-            
+
             //int count = 1;
             //do
             //{
             //    MessageBox.Show("Loop executed successfully");
-             //} while (count <= 4);
+            //} while (count <= 4);
 
 
             // FOREACH
 
-            string[] days = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-            foreach(string day in days)
+            string[] days = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+            foreach (string day in days)
             {
                 MessageBox.Show("the Day is : " + day);
             }
+
         }
     }
 }
