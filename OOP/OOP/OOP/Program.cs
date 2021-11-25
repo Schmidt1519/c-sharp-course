@@ -29,5 +29,26 @@ namespace OOP
                     hWorked = 0;
             }
         }
+
+        public void PrintMessage()
+        {
+            Console.WriteLine("Calculating Pay...");
+        }
+
+        public int CalculatePay()
+        {
+            PrintMessage();
+
+            int staffPay;
+            staffPay = hWorked * hourlyRate;
+
+            if (hWorked > 0)
+                return staffPay;
+            else
+                return 0;
+        }
     }
+
+
+
 }
