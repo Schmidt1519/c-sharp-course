@@ -6,7 +6,27 @@ namespace OOP
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
+            
+            int pay;
+
+            Staff staff1 = new Staff("Rick", "Williams");
+            staff1.HoursWorked = 160;
+            pay = staff1.CalculatePay(1000, 400);
+            Console.WriteLine("pay = {0}", pay);
+
+            Staff staff2 = new Staff("Lucy", "James");
+            staff2.HoursWorked = 160;
+            pay = staff2.CalculatePay();
+            Console.WriteLine("Pay = {0}", pay);
+
+            Staff staff3 = new Staff("Leighton", "Schmidt");
+            staff3.HoursWorked = -10;
+            pay = staff3.CalculatePay();
+            Console.WriteLine("Pay = {0}", pay);
+
+            Console.Read();
+
         }
     }
 
