@@ -33,6 +33,13 @@ namespace Inheritance
                 Console.WriteLine(m.ToString());
             }
 
+            if (clubMembers[3].GetType() == typeof(VIPMember))
+                Console.WriteLine("Yes");
+            else
+                Console.WriteLine("No");
+
+            Console.Read();
+
         }
     }
 
