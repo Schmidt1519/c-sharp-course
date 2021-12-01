@@ -6,17 +6,32 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello World!");
+            //NormalMember mem1 = new NormalMember("Special Rate", "Rick", 1, 2020);
 
-            NormalMember mem1 = new NormalMember("Special Rate", "Rick", 1, 2020);
+            //VIPMember mem2 = new VIPMember("Joe", 2, 2021);
 
-            VIPMember mem2 = new VIPMember("Joe", 2, 2021);
+            //mem1.CalculateAnnualFee();
+            //mem2.CalculateAnnualFee();
 
-            mem1.CalculateAnnualFee();
-            mem2.CalculateAnnualFee();
+            //Console.WriteLine(mem1.ToString());
+            //Console.WriteLine(mem2.ToString());
 
-            Console.WriteLine(mem1.ToString());
-            Console.WriteLine(mem2.ToString());
+
+            // POLYMORPHISM
+
+            Member[] clubMembers = new Member[5];
+
+            clubMembers[0] = new NormalMember("Special Rate", "James", 1, 2010);
+            clubMembers[1] = new NormalMember("Normal Rate", "Andy", 2, 2011);
+            clubMembers[2] = new NormalMember("Normal Rate", "Bill", 3, 2011);
+            clubMembers[3] = new VIPMember("Carol", 1, 2012);
+            clubMembers[4] = new VIPMember("Evelyn", 1, 2012);
+
+            foreach(Member m in clubMembers)
+            {
+                m.CalculateAnnualFee();
+                Console.WriteLine(m.ToString());
+            }
 
         }
     }
@@ -27,6 +42,12 @@ namespace Inheritance
         private string name;
         private int memberID;
         private int memberSince;
+
+
+        public virtual void CalculateAnnualFee()
+        {
+            annualFee = 0;
+        }
 
         public override string ToString()
         {
@@ -61,7 +82,7 @@ namespace Inheritance
             Console.WriteLine("Remarks = {0}", remarks);
         }
 
-        public void CalculateAnnualFee()
+        public override void CalculateAnnualFee()
         {
             annualFee = 100 + 12 * 30;
         }
@@ -74,7 +95,7 @@ namespace Inheritance
             Console.WriteLine("Child Constructor with 3 parameters");
         }
 
-        public void CalculateAnnualFee()
+        public override void CalculateAnnualFee()
         {
             annualFee = 1200;
         }
