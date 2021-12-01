@@ -6,7 +6,18 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
+
+            NormalMember mem1 = new NormalMember("Special Rate", "Rick", 1, 2020);
+
+            VIPMember mem2 = new VIPMember("Joe", 2, 2021);
+
+            mem1.CalculateAnnualFee();
+            mem2.CalculateAnnualFee();
+
+            Console.WriteLine(mem1.ToString());
+            Console.WriteLine(mem2.ToString());
+
         }
     }
 
