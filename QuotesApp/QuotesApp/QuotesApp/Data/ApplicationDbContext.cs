@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using QuotesApp.Models;
 
 namespace QuotesApp.Data
 {
@@ -12,5 +13,6 @@ namespace QuotesApp.Data
             : base(options)
         {
         }
+        public DbSet<QuotesApp.Models.Quote> Quote { get; set; }
     }
 }
