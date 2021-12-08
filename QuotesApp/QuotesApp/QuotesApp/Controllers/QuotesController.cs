@@ -25,6 +25,12 @@ namespace QuotesApp.Controllers
             return View(await _context.Quote.ToListAsync());
         }
 
+        // GET: Quotes/ShowSearchForm
+        public async Task<IActionResult> ShowSearchForm()
+        {
+            return View();
+        }
+
         // GET: Quotes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
