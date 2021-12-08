@@ -1,7 +1,9 @@
 ﻿
+using System;
+
 namespace VolumeConverter
 {
-    partial class Form1
+    partial class volumeConverter
     {
         /// <summary>
         /// Required designer variable.
@@ -29,103 +31,116 @@ namespace VolumeConverter
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.convertClTitleLabel = new System.Windows.Forms.Label();
+            this.clLabel = new System.Windows.Forms.Label();
+            this.litreLabel = new System.Windows.Forms.Label();
+            this.clTextBox = new System.Windows.Forms.TextBox();
+            this.litreTextBox = new System.Windows.Forms.TextBox();
+            this.convertButton = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // convertClTitleLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(270, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Convert CL to Litre";
+            this.convertClTitleLabel.AutoSize = true;
+            this.convertClTitleLabel.Location = new System.Drawing.Point(270, 91);
+            this.convertClTitleLabel.Name = "convertClTitleLabel";
+            this.convertClTitleLabel.Size = new System.Drawing.Size(95, 13);
+            this.convertClTitleLabel.TabIndex = 0;
+            this.convertClTitleLabel.Text = "Convert CL to Litre";
             // 
-            // label2
+            // clLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(446, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "CL";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.clLabel.AutoSize = true;
+            this.clLabel.Location = new System.Drawing.Point(446, 152);
+            this.clLabel.Name = "clLabel";
+            this.clLabel.Size = new System.Drawing.Size(20, 13);
+            this.clLabel.TabIndex = 1;
+            this.clLabel.Text = "CL";
+            this.clLabel.Click += new System.EventHandler(this.clTextBox_Click);
             // 
-            // label3
+            // litreLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(446, 222);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Litre";
+            this.litreLabel.AutoSize = true;
+            this.litreLabel.Location = new System.Drawing.Point(446, 222);
+            this.litreLabel.Name = "litreLabel";
+            this.litreLabel.Size = new System.Drawing.Size(27, 13);
+            this.litreLabel.TabIndex = 2;
+            this.litreLabel.Text = "Litre";
             // 
-            // textBox1
+            // clTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(273, 152);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.clTextBox.Location = new System.Drawing.Point(273, 152);
+            this.clTextBox.Name = "clTextBox";
+            this.clTextBox.Size = new System.Drawing.Size(100, 20);
+            this.clTextBox.TabIndex = 3;
+            this.clTextBox.TextChanged += new System.EventHandler(this.clTextBox_TextChanged);
             // 
-            // textBox2
+            // litreTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(273, 222);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.litreTextBox.Location = new System.Drawing.Point(273, 222);
+            this.litreTextBox.Name = "litreTextBox";
+            this.litreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.litreTextBox.TabIndex = 4;
             // 
-            // button1
+            // convertButton
             // 
-            this.button1.Location = new System.Drawing.Point(273, 289);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Convert";
-            this.button1.UseVisualStyleBackColor = true;
+            this.convertButton.Location = new System.Drawing.Point(273, 289);
+            this.convertButton.Name = "convertButton";
+            this.convertButton.Size = new System.Drawing.Size(75, 23);
+            this.convertButton.TabIndex = 5;
+            this.convertButton.Text = "Convert";
+            this.convertButton.UseVisualStyleBackColor = true;
+            this.convertButton.Click += new System.EventHandler(this.convertButton_Click);
             // 
-            // button2
+            // clearButton
             // 
-            this.button2.Location = new System.Drawing.Point(376, 289);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.clearButton.Location = new System.Drawing.Point(376, 289);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(75, 23);
+            this.clearButton.TabIndex = 6;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
-            // Form1
+            // volumeConverter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.convertButton);
+            this.Controls.Add(this.litreTextBox);
+            this.Controls.Add(this.clTextBox);
+            this.Controls.Add(this.litreLabel);
+            this.Controls.Add(this.clLabel);
+            this.Controls.Add(this.convertClTitleLabel);
+            this.Name = "volumeConverter";
             this.Text = "Volume Converter CL to Litre";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
+        private void clTextBox_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void clTextBox_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label convertClTitleLabel;
+        private System.Windows.Forms.Label clLabel;
+        private System.Windows.Forms.Label litreLabel;
+        private System.Windows.Forms.TextBox clTextBox;
+        private System.Windows.Forms.TextBox litreTextBox;
+        private System.Windows.Forms.Button convertButton;
+        private System.Windows.Forms.Button clearButton;
     }
 }
 

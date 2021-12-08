@@ -10,16 +10,28 @@ using System.Windows.Forms;
 
 namespace VolumeConverter
 {
-    public partial class Form1 : Form
+    public partial class volumeConverter : Form
     {
-        public Form1()
+        public volumeConverter()
         {
             InitializeComponent();
+            litreTextBox.Enabled = false;
+        
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void convertButton_Click(object sender, EventArgs e)
         {
+            float cl;
+            float litre;
+            cl = Convert.ToInt32(clTextBox.Text);
+            litre = cl / 100;
+            litreTextBox.Text = (litre.ToString());
+        }
 
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            clTextBox.Text = "";
+            litreTextBox.Text = "";
         }
     }
 }
