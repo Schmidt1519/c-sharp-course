@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CF7004A6-065A-4809-861B-062C2A75F592}</ProjectGuid>
+    <ProjectGuid>{B80A1C4D-62D6-4BAF-8CD7-79B07EAA6BFA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>VolumeConverter</RootNamespace>
-    <AssemblyName>VolumeConverter</AssemblyName>
+    <RootNamespace>myPaint</RootNamespace>
+    <AssemblyName>myPaint</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,9 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
