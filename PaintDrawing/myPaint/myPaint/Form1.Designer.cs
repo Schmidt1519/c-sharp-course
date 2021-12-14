@@ -41,6 +41,7 @@ namespace myPaint
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,7 +56,6 @@ namespace myPaint
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            //this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -69,13 +69,13 @@ namespace myPaint
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             // 
             // saveImageAsToolStripMenuItem
             // 
             this.saveImageAsToolStripMenuItem.Name = "saveImageAsToolStripMenuItem";
-            this.saveImageAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveImageAsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.saveImageAsToolStripMenuItem.Text = "Save Image As";
             // 
             // toolStrip1
@@ -85,7 +85,8 @@ namespace myPaint
             this.toolStripButton2,
             this.toolStripButton3,
             this.toolStripButton4,
-            this.toolStripButton5});
+            this.toolStripButton5,
+            this.toolStripButton6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
@@ -101,6 +102,7 @@ namespace myPaint
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(28, 22);
             this.toolStripButton1.Text = "red";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
             // 
@@ -111,6 +113,7 @@ namespace myPaint
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(34, 22);
             this.toolStripButton2.Text = "blue";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
@@ -121,6 +124,7 @@ namespace myPaint
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(41, 22);
             this.toolStripButton3.Text = "green";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 
@@ -131,6 +135,7 @@ namespace myPaint
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(45, 22);
             this.toolStripButton4.Text = "purple";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripButton5
             // 
@@ -141,6 +146,7 @@ namespace myPaint
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(34, 22);
             this.toolStripButton5.Text = "lime";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // pictureBox1
             // 
@@ -151,7 +157,20 @@ namespace myPaint
             this.pictureBox1.Size = new System.Drawing.Size(800, 401);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            //this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton6.ForeColor = System.Drawing.Color.Black;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(39, 22);
+            this.toolStripButton6.Text = "black";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // Form1
             // 
@@ -187,6 +206,7 @@ namespace myPaint
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
     }
 }
 
