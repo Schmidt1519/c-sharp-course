@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.ComponentModel;
+
 namespace MusicPlayer
 {
     partial class Form1
@@ -70,6 +73,7 @@ namespace MusicPlayer
             this.button1.TabIndex = 2;
             this.button1.Text = "Browse";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -82,6 +86,7 @@ namespace MusicPlayer
             this.button2.TabIndex = 3;
             this.button2.Text = "Play";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -94,6 +99,7 @@ namespace MusicPlayer
             this.button3.TabIndex = 4;
             this.button3.Text = "Pause";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -106,6 +112,7 @@ namespace MusicPlayer
             this.button4.TabIndex = 5;
             this.button4.Text = "Stop";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -118,10 +125,12 @@ namespace MusicPlayer
             this.button5.TabIndex = 6;
             this.button5.Text = "Exit";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // Form1
             // 
@@ -146,6 +155,21 @@ namespace MusicPlayer
             this.PerformLayout();
 
         }
+
+        //private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //private void Button1_Click(object sender, EventArgs e)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //private void textBox1_TextChanged(object sender, EventArgs e)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         #endregion
 
